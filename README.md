@@ -503,6 +503,28 @@ auth := context.WithValue(context.Background(), shipping.ContextAccessToken, "BE
 r, err := client.Service.Operation(auth, args)
 ```
 
+### Usage
+
+To call a specific operation, refer to the details below
+
+Syntax
+```go
+_, response, error := client.Service.Operation(auth, args).Execute()
+```
+
+Example
+
+```go
+shippingCfg := shipping.NewConfiguration()
+shippingApiClient := shipping.NewAPIClient(shippingCfg)
+
+SERVER_INDEX := 1 (or 0) // 0=sandbox (default), 1=production
+auth := context.WithValue(context.Background(), shipping.ContextServerIndex, SERVER_INDEX)
+auth = context.WithValue(auth, shipping.ContextAccessToken, "BEARER_TOKEN_STRING")
+
+_, response, error := shippingApiClient.ShipmentAPI.GetAllShipments(auth).Execute()
+```
+
 
 ## Documentation for Utility Methods
 
