@@ -1,0 +1,281 @@
+# CreateBulkShipmentsAPIERRRequest
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Name** | **string** | Name of the of ERR Batch which consists of multiple shipments (shipments in bulk) for Coversheet printing., e.g. ERR-Coversheet07. | 
+**GroupName** | Pointer to **string** | Indicates the name of the group of batches, which consists of multiple Batch groups. | [optional] 
+**Size** | **string** | This indicates the envelope size of the ERR Bulk Shipment, i.e., DocSize. We have indicated the example values in enum. | 
+**Type** | **string** | Indicates the type of the Batch Shipment, e.g., Shipping Label. | 
+**Format** | Pointer to **string** | This defines the format type of the shipment which is printed. For example Coversheet prints in PDF form. | [optional] 
+**CarrierAccountId** | **string** | The unique identifier associated with the user&#39;s registered USPS Account which will be required for this batch. User can override this value by defining it at Shipment level. | 
+**ServiceId** | **string** | A unique identifier given  to the carrier-specific service which is used for this BulkShipment. User can override this value by defining it at shipment level. | 
+**ParcelType** | **string** | Parcel Type is required for creating a shipment while rating a parcel. And it varies as per USPS selected services, e.g. LTR, LGENV. User can override this value by defining it at shipment level. | 
+**ParcelID** | Pointer to **string** | A unique identifier given to the parcel or package corresponding to the selected service. This is optional field, but is used in few cases. Examples include BLM10, B1095, MT1098, etc. User can override this value by defining it at Shipment level. | [optional] 
+**SpecialServices** | Pointer to [**[]SpecialServiceERRInner**](SpecialServiceERRInner.md) |  | [optional] 
+**Shipments** | [**[]ShipmentERRCoversheet**](ShipmentERRCoversheet.md) |  | 
+
+## Methods
+
+### NewCreateBulkShipmentsAPIERRRequest
+
+`func NewCreateBulkShipmentsAPIERRRequest(name string, size string, type_ string, carrierAccountId string, serviceId string, parcelType string, shipments []ShipmentERRCoversheet, ) *CreateBulkShipmentsAPIERRRequest`
+
+NewCreateBulkShipmentsAPIERRRequest instantiates a new CreateBulkShipmentsAPIERRRequest object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewCreateBulkShipmentsAPIERRRequestWithDefaults
+
+`func NewCreateBulkShipmentsAPIERRRequestWithDefaults() *CreateBulkShipmentsAPIERRRequest`
+
+NewCreateBulkShipmentsAPIERRRequestWithDefaults instantiates a new CreateBulkShipmentsAPIERRRequest object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetName
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *CreateBulkShipmentsAPIERRRequest) SetName(v string)`
+
+SetName sets Name field to given value.
+
+
+### GetGroupName
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetGroupName() string`
+
+GetGroupName returns the GroupName field if non-nil, zero value otherwise.
+
+### GetGroupNameOk
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetGroupNameOk() (*string, bool)`
+
+GetGroupNameOk returns a tuple with the GroupName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupName
+
+`func (o *CreateBulkShipmentsAPIERRRequest) SetGroupName(v string)`
+
+SetGroupName sets GroupName field to given value.
+
+### HasGroupName
+
+`func (o *CreateBulkShipmentsAPIERRRequest) HasGroupName() bool`
+
+HasGroupName returns a boolean if a field has been set.
+
+### GetSize
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetSize() string`
+
+GetSize returns the Size field if non-nil, zero value otherwise.
+
+### GetSizeOk
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetSizeOk() (*string, bool)`
+
+GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSize
+
+`func (o *CreateBulkShipmentsAPIERRRequest) SetSize(v string)`
+
+SetSize sets Size field to given value.
+
+
+### GetType
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *CreateBulkShipmentsAPIERRRequest) SetType(v string)`
+
+SetType sets Type field to given value.
+
+
+### GetFormat
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetFormat() string`
+
+GetFormat returns the Format field if non-nil, zero value otherwise.
+
+### GetFormatOk
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetFormatOk() (*string, bool)`
+
+GetFormatOk returns a tuple with the Format field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFormat
+
+`func (o *CreateBulkShipmentsAPIERRRequest) SetFormat(v string)`
+
+SetFormat sets Format field to given value.
+
+### HasFormat
+
+`func (o *CreateBulkShipmentsAPIERRRequest) HasFormat() bool`
+
+HasFormat returns a boolean if a field has been set.
+
+### GetCarrierAccountId
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetCarrierAccountId() string`
+
+GetCarrierAccountId returns the CarrierAccountId field if non-nil, zero value otherwise.
+
+### GetCarrierAccountIdOk
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetCarrierAccountIdOk() (*string, bool)`
+
+GetCarrierAccountIdOk returns a tuple with the CarrierAccountId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCarrierAccountId
+
+`func (o *CreateBulkShipmentsAPIERRRequest) SetCarrierAccountId(v string)`
+
+SetCarrierAccountId sets CarrierAccountId field to given value.
+
+
+### GetServiceId
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetServiceId() string`
+
+GetServiceId returns the ServiceId field if non-nil, zero value otherwise.
+
+### GetServiceIdOk
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetServiceIdOk() (*string, bool)`
+
+GetServiceIdOk returns a tuple with the ServiceId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetServiceId
+
+`func (o *CreateBulkShipmentsAPIERRRequest) SetServiceId(v string)`
+
+SetServiceId sets ServiceId field to given value.
+
+
+### GetParcelType
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetParcelType() string`
+
+GetParcelType returns the ParcelType field if non-nil, zero value otherwise.
+
+### GetParcelTypeOk
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetParcelTypeOk() (*string, bool)`
+
+GetParcelTypeOk returns a tuple with the ParcelType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetParcelType
+
+`func (o *CreateBulkShipmentsAPIERRRequest) SetParcelType(v string)`
+
+SetParcelType sets ParcelType field to given value.
+
+
+### GetParcelID
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetParcelID() string`
+
+GetParcelID returns the ParcelID field if non-nil, zero value otherwise.
+
+### GetParcelIDOk
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetParcelIDOk() (*string, bool)`
+
+GetParcelIDOk returns a tuple with the ParcelID field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetParcelID
+
+`func (o *CreateBulkShipmentsAPIERRRequest) SetParcelID(v string)`
+
+SetParcelID sets ParcelID field to given value.
+
+### HasParcelID
+
+`func (o *CreateBulkShipmentsAPIERRRequest) HasParcelID() bool`
+
+HasParcelID returns a boolean if a field has been set.
+
+### GetSpecialServices
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetSpecialServices() []SpecialServiceERRInner`
+
+GetSpecialServices returns the SpecialServices field if non-nil, zero value otherwise.
+
+### GetSpecialServicesOk
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetSpecialServicesOk() (*[]SpecialServiceERRInner, bool)`
+
+GetSpecialServicesOk returns a tuple with the SpecialServices field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSpecialServices
+
+`func (o *CreateBulkShipmentsAPIERRRequest) SetSpecialServices(v []SpecialServiceERRInner)`
+
+SetSpecialServices sets SpecialServices field to given value.
+
+### HasSpecialServices
+
+`func (o *CreateBulkShipmentsAPIERRRequest) HasSpecialServices() bool`
+
+HasSpecialServices returns a boolean if a field has been set.
+
+### GetShipments
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetShipments() []ShipmentERRCoversheet`
+
+GetShipments returns the Shipments field if non-nil, zero value otherwise.
+
+### GetShipmentsOk
+
+`func (o *CreateBulkShipmentsAPIERRRequest) GetShipmentsOk() (*[]ShipmentERRCoversheet, bool)`
+
+GetShipmentsOk returns a tuple with the Shipments field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetShipments
+
+`func (o *CreateBulkShipmentsAPIERRRequest) SetShipments(v []ShipmentERRCoversheet)`
+
+SetShipments sets Shipments field to given value.
+
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
