@@ -40,6 +40,11 @@ go get github.com/stretchr/testify/assert
 go get golang.org/x/net/context
 ```
 
+Install 360API shipping library
+```sh
+go get github.com/PitneyBowes/pitneybowes-360api-shipping-go 
+```
+
 Put the package under your project folder and add the following in import:
 
 ```go
